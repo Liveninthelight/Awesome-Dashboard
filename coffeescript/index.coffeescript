@@ -1,0 +1,16 @@
+$(".box").velocity "transition.slideDownIn", 
+  stagger: 250,
+  drag: true,
+  duration: 2000,
+  complete: ->
+    $(".value").each (index, item) ->
+      value = $(item).data("value");
+      val = parseInt value, 10
+    
+      $(someValue: 0).animate {someValue: val}, {
+        duration: 1000,
+        easing: 'swing',
+        step: ->
+          $(item).text Math.round(this.someValue)
+      }
+    

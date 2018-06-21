@@ -1,0 +1,107 @@
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,600,700|Play:400,700|Open+Sans+Condensed:300,600|Open+Sans:400,300,600,700);
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #ddd;
+}
+
+body {
+  font-family: "Open Sans";
+  font-size: 16px;
+}
+
+.row {
+  margin: 20px;
+}
+.row:before, .row:after {
+  content: "";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+.row .box {
+  display: none;
+  float: left;
+  position: relative;
+  width: 23%;
+  height: 100px;
+  margin: 1%;
+  color: White;
+  overflow: hidden;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+.row .box.purple {
+  background-color: #A48AEB;
+}
+.row .box.blue {
+  background-color: #6BB8E8;
+}
+.row .box.orange {
+  background-color: #EB9561;
+}
+.row .box.green {
+  background-color: #53E082;
+}
+.row .box .value {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 2.2rem;
+}
+.row .box .title {
+  position: absolute;
+  top: 50px;
+  right: 8px;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+.row .box .viewMore {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  text-align: center;
+  height: 24px;
+  line-height: 24px;
+  vertical-align: middle;
+  background-color: rgba(0, 0, 0, 0.1);
+  font-size: 0.8rem;
+  cursor: pointer;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.row .box:hover .viewMore {
+  background-color: rgba(0, 0, 0, 0.2);
+  bottom: 0px;
+}
+.row .box:before {
+  font-family: FontAwesome;
+  content: "\f007";
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  font-size: 4.0rem;
+  color: rgba(255, 255, 255, 0.25);
+}
+.row .box.icon-check:before {
+  content: "\f046";
+}
+.row .box.icon-quote:before {
+  content: "\f10e";
+}
+.row .box.icon-graph:before {
+  content: "\f201";
+}
